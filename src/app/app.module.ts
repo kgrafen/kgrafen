@@ -30,6 +30,7 @@ import { HologramsListComponent } from './components/elements/holograms-list/hol
 import { AddHologramComponent } from './components/elements/add-hologram/add-hologram.component';
 import { MisjaComponent } from './components/pages/misja/misja.component';
 import { WizjaComponent } from './components/pages/wizja/wizja.component';
+import { RegulaminComponent } from './components/pages/regulamin/regulamin.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { WizjaComponent } from './components/pages/wizja/wizja.component';
     AddHologramComponent,
     MisjaComponent,
     WizjaComponent,
+    RegulaminComponent,
   ],
   imports: [
     BrowserModule,
