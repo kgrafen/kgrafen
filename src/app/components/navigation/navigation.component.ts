@@ -12,12 +12,12 @@ export class NavigationComponent implements OnInit {
 
 
   menuItems: MenuItem[] = [
-    new MenuItem("AI Holo", "/home", "#4488C5", { hasPreview: true }),
-    new MenuItem("Contact", "/contact", "#F9A939"),
-    new MenuItem("Social", "/social", "#E999EC"),
-    new MenuItem("Projects", "/projects", "#98D9ED", { hasPreview: true }),
-    new MenuItem("Quantum Neurofeedback", "http://biofeedback.malopolska.pl/", "#92EC77", { isExternal: true, hasPreview: true }),
-    new MenuItem("Quantum Foundation", "http://quantumfoundation.eu/", "#F9E637", { isExternal: true, hasPreview: true }),
+    new MenuItem("K~Grafen", "/home", "#4488C5"),
+    new MenuItem("Kontakt", "/contact", "#F9A939"),
+    new MenuItem("Spolecznosci", "/social", "#E999EC"),
+    new MenuItem("Projekty", "/projects", "#98D9ED"),
+    new MenuItem("Misja", "/misja", "#92EC77"),
+    new MenuItem("Wizja", "/wizja", "#F9E637"),
     new MenuItem("Games", "/games", "#B95670"),
     // new MainMenuItem("PINS", "https://pinslive.wordpress.com/", "#B95670", true),
   ]
@@ -30,7 +30,6 @@ export class NavigationComponent implements OnInit {
   ) {
   }
 
-  sample = "questions"
   Math: any = Math;
   doctorCoin: CoinSettings = new CoinSettings(["Holo Doctor"], { theme: "purple" }, [], { url: "http://quantumfoundation.eu/wp-content/uploads/2018/08/eth_back.png" });
   qfCoin: CoinSettings = new CoinSettings("", { url:"https://quantumfunds.files.wordpress.com/2018/11/12star8frameqf.png", theme: "purple" }, [], { url: "http://quantumfoundation.eu/wp-content/uploads/2018/08/eth_back.png" });
