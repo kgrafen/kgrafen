@@ -16,10 +16,10 @@ app-coin:first-child, app-coin:nth-child(6)   {
 
 .holoMandala {
   width: 732px;
-  background-image: url("https://quantumfunds.files.wordpress.com/2018/11/12star8frame.png");
+  background-image: url("/assets/images/KSGrafenFields.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 536px;
+  height: 580px;
   margin: 100px auto;
   padding: 314px 154px;
   zoom: .5;
@@ -39,8 +39,10 @@ app-coin:first-child, app-coin:nth-child(6)   {
 }
 
 .starMenuItem {
+  text-align: center;
   position: absolute;
-  font-size: 24px;
+  width: 160px;
+  height: 100px;
   cursor: pointer;
 }
 

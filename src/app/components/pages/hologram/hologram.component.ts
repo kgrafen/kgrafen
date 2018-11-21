@@ -36,7 +36,7 @@ export class HologramComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.projectsNames = this.projectsService.MasterProjectsNames;
+    this.projectsNames = this.projectsService.KgrafenFields;
     this.sourcesNames = this.hologramsService.Sources;
     this.isFullscreen = this.hologramsService.isFullscreen;
     this.hologramsService.get().subscribe(holograms => {

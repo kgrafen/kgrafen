@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyD8dwDXR6l2Omn0Zzo5RSmMjEn51N9OrFU",
-    authDomain: "holopediali-722c8.firebaseapp.com",
-    databaseURL: "https://holopediali-722c8.firebaseio.com",
-    projectId: "holopediali-722c8",
-    storageBucket: "holopediali-722c8.appspot.com",
-    messagingSenderId: "143803173878"
+    apiKey: "AIzaSyBrwZ_3HSDJPbYV33gVnTAoYF3p7mV9d1Q",
+    authDomain: "kgrafen-485e3.firebaseapp.com",
+    databaseURL: "https://kgrafen-485e3.firebaseio.com",
+    projectId: "kgrafen-485e3",
+    storageBucket: "",
+    messagingSenderId: "755575610405"
   }
 };

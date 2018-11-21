@@ -32,5 +32,18 @@ export class ProjectsService {
     return this.masterProjects;
   }
 
+  private kgrafenFields: string[] = [
+    'Energie Odnawialne',
+    'Elektronika',
+    'Elektromobilnosc',
+    'Materialy',
+    'Elektrotechnika',
+    'Kompozyty',
+  ];
+
+  public get KgrafenFields(): string[] {
+    return this.kgrafenFields;
+  }
+
   constructor() { }
 }
