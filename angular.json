@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HolopediaLi": {
+    "KGrafen": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/HolopediaLi",
+            "outputPath": "dist/KGrafen",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "HolopediaLi:build"
+            "browserTarget": "KGrafen:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "HolopediaLi:build:production"
+              "browserTarget": "KGrafen:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "HolopediaLi:build"
+            "browserTarget": "KGrafen:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "HolopediaLi-e2e": {
+    "KGrafen-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "HolopediaLi:serve"
+            "devServerTarget": "KGrafen:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "HolopediaLi:serve:production"
+              "devServerTarget": "KGrafen:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "HolopediaLi"
+  "defaultProject": "KGrafen"
 }
