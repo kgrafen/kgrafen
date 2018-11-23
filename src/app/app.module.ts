@@ -31,6 +31,7 @@ import { AddHologramComponent } from './components/elements/add-hologram/add-hol
 import { MisjaComponent } from './components/pages/misja/misja.component';
 import { WizjaComponent } from './components/pages/wizja/wizja.component';
 import { RegulaminComponent } from './components/pages/regulamin/regulamin.component';
+import { ForumComponent } from './components/pages/forum/forum.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { RegulaminComponent } from './components/pages/regulamin/regulamin.compo
     MisjaComponent,
     WizjaComponent,
     RegulaminComponent,
+    ForumComponent,
   ],
   imports: [
     BrowserModule,

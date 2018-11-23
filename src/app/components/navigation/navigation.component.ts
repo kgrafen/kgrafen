@@ -16,8 +16,8 @@ export class NavigationComponent implements OnInit {
     new MenuItem("Kontakt", "/contact", "#F9A939"),
     new MenuItem("Spolecznosci", "/social", "#E999EC"),
     new MenuItem("Projekty", "/projects", "#98D9ED"),
-    new MenuItem("Misja", "/misja", "#92EC77"),
-    new MenuItem("Wizja", "/wizja", "#F9E637"),
+    new MenuItem("Misja i Wizja", "/misja", "#92EC77"),
+    new MenuItem("Forum", "/forum", "#F9E637"),
     new MenuItem("Regulamin", "/regulamin", "#B95670"),
     // new MainMenuItem("PINS", "https://pinslive.wordpress.com/", "#B95670", true),
   ]
