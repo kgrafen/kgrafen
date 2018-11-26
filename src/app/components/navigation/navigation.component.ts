@@ -18,7 +18,7 @@ export class NavigationComponent implements OnInit {
     new MenuItem("Projekty", "/projects", "#98D9ED"),
     new MenuItem("Misja i Wizja", "/misja", "#92EC77"),
     new MenuItem("Forum", "/forum", "#F9E637"),
-    new MenuItem("Regulamin", "/regulamin", "#B95670"),
+    new MenuItem("Deklaracja i Regulamin", "/regulamin", "#fa96ab"),
     // new MainMenuItem("PINS", "https://pinslive.wordpress.com/", "#B95670", true),
   ]
 
@@ -91,7 +91,7 @@ export class NavigationComponent implements OnInit {
 
   sineVal(i, l) {
     let shifted = i - (l - 1) / 2;
-    return Math.cos(shifted * 0.01) * 2400 - 2400;
+    return Math.cos(shifted * 0.01) * 1600 - 1600;
   }
 
 }
