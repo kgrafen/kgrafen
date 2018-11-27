@@ -32,6 +32,7 @@ import { MisjaComponent } from './components/pages/misja/misja.component';
 import { WizjaComponent } from './components/pages/wizja/wizja.component';
 import { RegulaminComponent } from './components/pages/regulamin/regulamin.component';
 import { ForumComponent } from './components/pages/forum/forum.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ForumComponent } from './components/pages/forum/forum.component';
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule // imports firebase/storage only needed for storage features
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    PdfViewerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -25,6 +25,7 @@
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
     "firebase": "^5.5.8",
+    "ng2-pdf-viewer": "^5.2.3",
     "ngx-embed-video": "^1.0.2",
     "ngx-facebook": "^2.4.0",
     "ngx-twitter-timeline": "^0.1.4",

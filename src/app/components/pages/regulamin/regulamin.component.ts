@@ -8,6 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class RegulaminComponent implements OnInit {
 
   constructor() { }
+  
+  menu = [
+    {name: "Deklaracja", link:"regulamin#deklaracja"},
+    {name: "Uchwała", link:"regulamin#uchwala"},
+    {name: "Regulamin", link:"regulamin#regulamin"},
+    {name: "Statut", link:"regulamin#statut"},
+  ];
+
+  pdfSrc = "assets/images/statutSEP.pdf"
 
   ngOnInit() {
   }
