@@ -11,6 +11,7 @@ import { HologramComponent } from './components/pages/hologram/hologram.componen
 import { MisjaComponent } from './components/pages/misja/misja.component';
 import { WizjaComponent } from './components/pages/wizja/wizja.component';
 import { RegulaminComponent } from './components/pages/regulamin/regulamin.component';
+import { ForumComponent } from './components/pages/forum/forum.component';
 
 const routes: Routes = [
   { path: 'home',  component: HomeComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: 'wizja',  component: WizjaComponent },
   { path: 'regulamin',  component: RegulaminComponent },
   { path: 'hologram',  component: HologramComponent },
+  { path: 'forum',  component: ForumComponent },
   { path: 'hologram/:holoid',  component: HologramComponent },
   // individual holo master coin
   { path: 'projects/:project',  component: ProjectsComponent },
