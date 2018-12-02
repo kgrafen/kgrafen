@@ -12,12 +12,12 @@ export class NavigationComponent implements OnInit {
 
 
   menuItems: MenuItem[] = [
-    new MenuItem("K~Grafen", "/home", "#4488C5"),
-    new MenuItem("Kontakt", "/contact", "#F9A939"),
-    new MenuItem("Spolecznosci", "/social", "#E999EC"),
-    new MenuItem("Projekty", "/projects", "#98D9ED"),
-    new MenuItem("Misja i Wizja", "/misja", "#92EC77"),
-    new MenuItem("Forum", "/forum", "#F9E637"),
+    new MenuItem("Polski Komitet Naukowy SEP", "/home", "#b9d4ec"),
+    new MenuItem("Kontakt", "/contact", "#ffe2b9"),
+    new MenuItem("Społeczności", "/social", "#f1c5f3"),
+    new MenuItem("Projekty", "/projects", "#caecf7"),
+    new MenuItem("Misja i Wizja", "/misja", "#bff5af"),
+    new MenuItem("Forum", "/forum", "#ece6ac"),
     new MenuItem("Deklaracja i Regulamin", "/regulamin", "#fa96ab"),
     // new MainMenuItem("PINS", "https://pinslive.wordpress.com/", "#B95670", true),
   ]

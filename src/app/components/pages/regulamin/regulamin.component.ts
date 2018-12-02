@@ -16,7 +16,7 @@ export class RegulaminComponent implements OnInit {
     {name: "Statut", link:"regulamin#statut"},
   ];
 
-  pdfSrc = "assets/images/statutSEP.pdf"
+  pdfSrc = "assets/images/regulamin/statutSEP.pdf"
 
   ngOnInit() {
   }

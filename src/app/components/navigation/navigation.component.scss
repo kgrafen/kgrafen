@@ -5,13 +5,13 @@
 .sevenlevels {
   background-image: url("/assets/images/sevenlevels.png");
   background-repeat: no-repeat;
-  height: 316px;
-  padding-top: 69px;
+  height: 321px;
+  padding-top: 66px;
   text-align: center;
   max-width: 406px;
-  font-size: 28px;
-  line-height: 45px;
-  margin: -84px auto 40px;
+  font-size: 25px;
+  line-height: 47px;
+  margin: -84px auto 80px;
   background-size: 100% 100%;
   letter-spacing: 1px;
   font-weight: 600;
@@ -43,5 +43,20 @@ text {
   text-align: center;
   vertical-align: middle;
   line-height: 300px; 
-  font-size: 42px;
+  font-size: 36px;
+}
+
+.navigationCaption{
+  font-size: 25px;
+  line-height: normal;
+}
+
+.image {
+  text-align: center;
+  margin: 20px;
+  font-size: 28px;
+
+  img {
+      width: 100%;
+  }
 }

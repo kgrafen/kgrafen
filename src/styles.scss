@@ -6,6 +6,15 @@ body {
   font-family: Calibri, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+a {
+  text-decoration: none;
+  color: #540101;
+}
+
+h3 {
+  margin: 0 0 20px 0;
+}
+
 .hexagon {
   transform: rotate(-30deg);
   $hexagon-size: 150px;

@@ -20,7 +20,7 @@ app-coin:first-child, app-coin:nth-child(6)   {
   background-size: 100%;
   background-repeat: no-repeat;
   height: 580px;
-  margin: 100px auto;
+  margin: 20px auto;
   padding: 314px 154px;
   zoom: .5;
 }
@@ -48,4 +48,19 @@ app-coin:first-child, app-coin:nth-child(6)   {
 
 .starMenuItem:hover {
   font-weight: bold;
+}
+
+article  {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pic {
+  float: left;
+  margin-right: 20px;
+}
+
+.text {
+  font-size: 14px;
 }
