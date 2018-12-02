@@ -29,12 +29,12 @@ export class ProjectStarComponent implements OnInit {
   ]
 
   projects = [
-    {name: "Energie Odnawialne",   style: { top: "158px",  left: "calc(50% - 3px)",   transform: "translateX(-100%)"}},
-    {name: "Elektronika",          style: { top: "300px",  left: "calc(50% - 86px)",  transform: "translateX(-100%)"}},
-    {name: "Elektromobilnosc",     style: { top: "445px",  left: "calc(50% - 3px)",   transform: "translateX(-100%)"}},
-    {name: "Materialy",            style: { top: "445px",  left: "calc(50% + 3px)",   transform: "translateX(0%)"}},
-    {name: "Elektrotechnika",      style: { top: "300px",  left: "calc(50% + 86px)",  transform: "translateX(0%)"}},
-    {name: "Kompozyty",            style: { top: "158px",  left: "calc(50% + 3px)",   transform: "translateX(0%)"}},
+    {name: "Energie Odnawialne",   style: { top: "118px",  left: "calc(50% - 3px)",   transform: "translateX(-100%)"}},
+    {name: "Elektronika",          style: { top: "260px",  left: "calc(50% - 86px)",  transform: "translateX(-100%)"}},
+    {name: "Elektromobilnosc",     style: { top: "405px",  left: "calc(50% - 3px)",   transform: "translateX(-100%)"}},
+    {name: "Materialy",            style: { top: "405px",  left: "calc(50% + 3px)",   transform: "translateX(0%)"}},
+    {name: "Elektrotechnika",      style: { top: "260px",  left: "calc(50% + 86px)",  transform: "translateX(0%)"}},
+    {name: "Kompozyty",            style: { top: "118px",  left: "calc(50% + 3px)",   transform: "translateX(0%)"}},
   ]
   
 
