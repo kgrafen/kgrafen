@@ -64,3 +64,37 @@ article  {
 .text {
   font-size: 14px;
 }
+
+.leftSide {
+  position: relative;
+}
+
+.cornerText {
+  font-size: 33px;
+  position: absolute;
+  width: 30%;
+  padding: 0 5%;
+
+  &.leftTop {
+    left: 0;
+  }
+
+  &.leftTop:after {
+    content: '\021AA';
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  &.rightTop {
+    right: 0;
+    text-align: right;
+  }
+
+  &.rightTop:after {
+    content: '\021A9';
+    display: block;
+    font-size: 48px;
+    font-weight: bold;
+  }
+}

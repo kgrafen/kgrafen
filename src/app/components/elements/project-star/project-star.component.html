@@ -1,6 +1,9 @@
 <h1>Polski Komitet Naukowy SEP ds. Technologii Grafenowej ~ Projekty</h1>
 <div class="content" fxLayout="row" fxLayout.lt-md="column" fxFlexFill>
-  <div fxFlex="50" fxFlex.lt-md="100">
+  <div class="leftSide" fxFlex="50" fxFlex.lt-md="100">
+    <div class="leftTop cornerText">Wybierz dziedzinę</div>
+    <div class="rightTop cornerText">i wstaw wiadomość</div>
+     
     <div class="starMenu">
       <div *ngFor="let project of projects" class="starMenuItem" (click)="selectProject(project)" [ngStyle]="project.style"></div>
     </div>
