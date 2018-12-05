@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../models/menu-item';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
 import { CoinSettings, SideSettings } from '../models/coin';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navigation',
@@ -12,7 +13,7 @@ export class NavigationComponent implements OnInit {
 
 
   menuItems: MenuItem[] = [
-    new MenuItem("Polski Komitet Naukowy SEP", "/home", "#b9d4ec"),
+    new MenuItem("HOME", "/home", "#b9d4ec"),
     new MenuItem("Kontakt", "/contact", "#ffe2b9"),
     new MenuItem("Społeczności", "/social", "#f1c5f3"),
     new MenuItem("Projekty", "/projects", "#caecf7"),
@@ -26,8 +27,10 @@ export class NavigationComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private translateService: TranslateService,
     private router: Router,
   ) {
+    this.translateService.get('PAGES.HOME').subscribe(value => console.log('val', value));
   }
 
   Math: any = Math;

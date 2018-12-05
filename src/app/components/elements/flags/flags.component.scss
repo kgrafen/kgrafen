@@ -1,0 +1,12 @@
+.country_flags {
+  margin: 10px 0;
+}
+ .country_flags .flag {
+    margin-right: 10px;
+    cursor: pointer;
+    background-size: 100% 100%;
+    width: 60px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 5px;
+} 

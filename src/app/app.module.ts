@@ -34,6 +34,17 @@ import { RegulaminComponent } from './components/pages/regulamin/regulamin.compo
 import { ForumComponent } from './components/pages/forum/forum.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
+import { HttpModule } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { FlagsComponent } from './components/elements/flags/flags.component';
+
+ // AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/translations/', '.json');
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +57,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     ProjectsComponent,
     GamesComponent,
     ProjectStarComponent,
+    FlagsComponent,
     SafePipe,
     HologramComponent,
     CategoriesComponent,
@@ -60,6 +72,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpModule,
+    HttpClientModule,
     FlexLayoutModule,
     EmbedVideo.forRoot(),
     FacebookModule.forRoot(),
@@ -69,6 +83,13 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     PdfViewerModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

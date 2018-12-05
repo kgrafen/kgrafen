@@ -1,0 +1,3 @@
+<div class="country_flags">
+  <span *ngFor="let code of countryCodes" class="flag" (click)="changeLanguage(code)" [ngStyle]="{'background-image': 'url(http://flags.fmcdn.net/data/flags/w580/' + code + '.png)'}" ></span>
+</div>
