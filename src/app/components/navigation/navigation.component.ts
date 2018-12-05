@@ -12,16 +12,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavigationComponent implements OnInit {
 
 
-  menuItems: MenuItem[] = [
-    new MenuItem("HOME", "/home", "#b9d4ec"),
-    new MenuItem("Kontakt", "/contact", "#ffe2b9"),
-    new MenuItem("Społeczności", "/social", "#f1c5f3"),
-    new MenuItem("Projekty", "/projects", "#caecf7"),
-    new MenuItem("Misja i Wizja", "/misja", "#bff5af"),
-    new MenuItem("Forum", "/forum", "#ece6ac"),
-    new MenuItem("Deklaracja i Regulamin", "/regulamin", "#fa96ab"),
-    // new MainMenuItem("PINS", "https://pinslive.wordpress.com/", "#B95670", true),
-  ]
+  menuItems: MenuItem[] = [];
 
 
 
@@ -30,7 +21,7 @@ export class NavigationComponent implements OnInit {
     private translateService: TranslateService,
     private router: Router,
   ) {
-    this.translateService.get('PAGES.HOME').subscribe(value => console.log('val', value));
+
   }
 
   Math: any = Math;
@@ -42,13 +33,27 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
     this.loadGlobe();
-    this.router.events.subscribe(val => {
-      if (val instanceof RoutesRecognized) {
-        let selItem = this.menuItems.find(item => item.Link == val.url);
-        this.itemSelected = (selItem)? selItem: this.menuItems[0];
-        this.itemPreviewName = (!this.itemSelected.Settings.HasPreview) ? this.itemSelected.Name : "";
-        this.itemHoveredName = this.itemSelected.Name;
-      }
+
+    this.translateService.onLangChange.subscribe(value => {
+      let menuItemsTranslation = value.translations.NAVIGATION.ITEMS;
+      this.menuItems = [
+        new MenuItem(menuItemsTranslation["HOME"], "/home", "#b9d4ec"),
+        new MenuItem(menuItemsTranslation["CONTACT"], "/contact", "#ffe2b9"),
+        new MenuItem(menuItemsTranslation["SOCIAL"], "/social", "#f1c5f3"),
+        new MenuItem(menuItemsTranslation["PROJECTS"], "/projects", "#caecf7"),
+        new MenuItem(menuItemsTranslation["MISSION_VISION"], "/misja", "#bff5af"),
+        new MenuItem(menuItemsTranslation["FORUM"], "/forum", "#ece6ac"),
+        new MenuItem(menuItemsTranslation["DECLARATION"], "/regulamin", "#fa96ab"),
+      ];
+
+      this.router.events.subscribe(val => {
+        if (val instanceof RoutesRecognized) {
+          let selItem = this.menuItems.find(item => item.Link == val.url);
+          this.itemSelected = (selItem)? selItem: this.menuItems[0];
+          this.itemPreviewName = (!this.itemSelected.Settings.HasPreview) ? this.itemSelected.Name : "";
+          this.itemHoveredName = this.itemSelected.Name;
+        }
+      });
     });
   }
 

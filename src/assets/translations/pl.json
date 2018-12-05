@@ -1,4 +1,15 @@
 {
+  "NAVIGATION": {
+    "ITEMS": {
+      "HOME": "Polski Komitet Naukowy SEP",
+      "CONTACT": "Kontakt",
+      "SOCIAL": "Społeczności",
+      "PROJECTS": "Projekty",
+      "MISSION_VISION": "Misja i Wizja",
+      "FORUM": "Forum",
+      "DECLARATION": "Deklaracja i Regulamin"
+    }
+  },
   "PAGES": {
     "HOME": "Polski Komitet Naukowy SEP ds. Technologii Grafenowej"
   }

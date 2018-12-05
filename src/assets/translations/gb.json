@@ -1,10 +1,16 @@
 {
   "NAVIGATION": {
     "ITEMS": {
-      "HOME": "Polish Science Committee PSC"
+      "HOME": "Polish Science Committee PSC",
+      "CONTACT": "Contact",
+      "SOCIAL": "Social media",
+      "PROJECTS": "Projects",
+      "MISSION_VISION": "Mission & Vision",
+      "FORUM": "Forum",
+      "DECLARATION": "Declaration & Terms"
     }
-   },
-   "PAGES": {
-     "HOME": "Polish Science Committee in charge by APEE for Graphene Technology"
-    }
+  },
+  "PAGES": {
+    "HOME": "Polish Science Committee in charge by APEE for Graphene Technology"
+  }
  }
