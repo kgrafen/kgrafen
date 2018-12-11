@@ -1,3 +1,24 @@
 <h1> {{'PAGES.HOME' | translate}} ~ Forum</h1>
 
 Tutaj znajdziesz informacje na temat konferencji i wydarzeń naukowo-technicznych oraz o grantach realizowanych w ramach Polskiego Komitetu Naukowego SEP ds. Technologii Grafenowej
+
+<div class="carousel-wrapper" >
+  <div class="carousel-button left-button" (mouseenter)="spinRight(true)" (mouseleave)="spinRight(false)"></div>
+  <div class="carousel-button right-button" (mouseenter)="spinLeft(true)" (mouseleave)="spinLeft(false)"></div>
+  <section class="container">
+    <div id="carousel-outerer">
+      <div id="carousel-outer">
+        <div id="carousel">
+          <figure *ngFor="let item of carouselItem">
+            <div class="hexdiv" (mouseenter)="rotationPause()" (mouseleave)="rotationResume()">
+              <a [href]="item.link" target="_blank">
+                <img [src]="item.imageUrl" alt="">
+              </a>
+            </div>
+            <div class="subdiv">{{item.caption}}</div>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

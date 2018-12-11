@@ -27,9 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/carousel.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/carousel.js"
+            ]
           },
           "configurations": {
             "production": {
