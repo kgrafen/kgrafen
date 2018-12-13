@@ -2,46 +2,19 @@
 <div class="content" fxLayout="row" fxLayout.lt-md="column" fxFlexFill>
   <div fxFlex="50" fxFlex.lt-md="100">
 
-    <img src="assets/images/KSGrafenSymbolTrans50.png">
-    Polski Komitet Naukowy SEP do spraw Technologii Grafenowej ~ filary działalności
+    <img src="assets/images/{{'IMAGES.ACTIVITIES' | translate}}.png">
+
+    {{'PAGES.HOME' | translate}} ~ {{'PAGES.HOME.IMAGE_CAPTION' | translate}}
   </div>
   <div fxFlex="50" fxFlex.lt-md="100">
-    <h2>Założenia programowe</h2>
-    Problematyka Komitetu SEP do spraw Technologii Grafenowej ~ KS Grafen w pełni wpisuje się w realizacje statutowej
-    działalności SEP opierajac się głównie na sześciu filarach działalności:<br>
-    Działalność aktywizująca<br>
-    Działalność archiwizacyjna<br>
-    działalność badawcza<br>
-    działalność komercjalizacyjna<br>
-    działalność naukowa<br>
-    działalność popularyzatorska<br>
-    <br>
-    Ad 1. Działalność aktywizująca<br>
-    Działalność aktywizująca w pierwszym rzędzie opiera się na pracy Komitetu SEP do spraw Technologii, (symbol) KS
-    Grafen z dodatkowo utworzonymi zespołami tematycznymi.
-    <br><br>
-    Ad 2. Dzialalnosc archiwizujaca<br>
-    Działalność archiwizująca bazuje na tworzeniu baz danych, literaturowych, patentowych, raport, przeglądów,
-    zestawień wyników badań.
-    <br><br>
-    Ad 3. Dzialalnosc badawcza<br>
-    Działalność badawcza opiera się na aktywnym włączeniu się Komitetu do tworzonych konsorcjów z Jednostkami Naukowo
-    Badawczymi polegającym na udostępnianiu własnych materiałów źródłowych.
-    <br><br>
-    Ad 4. działalność komercjalizacyjna<br>
-    działalność komercjalizacyjna ma za zadanie wytworzenie struktury mającej na celu komercjalizację projektów naukowo
-    badawczych w oparciu o współpracę z MŚP, OBR, instytutów w konsorcjum z docelowym dążeniem do wyłonienia w ramach
-    komitetu własnej struktury pozwalającej na prowadzenie projektów komercyjnych (np grantów) w ramach Komitetu SEP do
-    spraw Technologii Grafenowej
-    <br><br>
-    Ad 5. działalność naukowa<br>
-    Działalność naukowa ma za zadanie prowadzenie prac systematyzujących i przeglądowych i ich publikacje
-    <br><br>
-    Ad 6. działalność popularyzatorska<br>
-    Działalność popularyzatorska ma za zadanie opracowywanie polskich i zagranicznych publikacji, książek, wnosić wkład
-    do prasy technicznej i newslettera SEP, tworzenie prac opiniodawczych i eksperckich, prowadzenie kampanii
-    reklamowych, wsparcie piśmiennictwa w zakresie tematycznym KS Grafen.
+    <h2 [innerHTML]="'PAGES.PROGRAM.TITLE' | translate"></h2>
+    <p [innerHTML]="'PAGES.PROGRAM.DESCRIPTION' | translate"></p>
+    <div *ngFor="let activity of [1,2,3,4,5,6]" [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.TITLE' | translate"></div>
 
+    <div *ngFor="let activity of [1,2,3,4,5,6]">
+      <h3 [innerHTML]="'Ad.' + activity + '. ' + ('PAGES.PROGRAM.AD_' + activity + '.TITLE' | translate)"></h3>
+      <p [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.DESCRIPTION' | translate"></p>
+    </div>
 
   </div>
 </div>

@@ -6,9 +6,6 @@
     <img [hidden]="itemHoveredName != 'Quantum Neurofeedback'" src="http://www.bubbwebhost.co.uk/JMatthews/Block/pictures/brain.gif"
       alt="">
     <div [hidden]="itemHoveredName != 'AI Holo'" id="revolverMaps"></div>
-    <app-coin [hidden]="itemHoveredName != 'Projects'" [coinObverse]="getHexSide(doctorCoin.ObverseSettings, '91%')"
-      [coinReverse]="getHexSide(doctorCoin.ReverseSettings)" [subtitle]="'Quantum Foundation Quantum Qtum'"
-      [obverseText]="doctorCoin.ObverseText"></app-coin>
     <app-coin [hidden]="itemHoveredName != 'Quantum Foundation'" [coinObverse]="getHexSide(qfCoin.ObverseSettings, '91%')"
       [coinReverse]="getHexSide(qfCoin.ReverseSettings)" [subtitle]="'Quantum Foundation Quantum Qtum'" [obverseText]="qfCoin.ObverseText"></app-coin>
   </div>

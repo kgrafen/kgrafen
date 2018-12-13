@@ -11,9 +11,40 @@
     }
   },
   "PAGES": {
-    "HOME": "Polski Komitet Naukowy SEP ds. Technologii Grafenowej"
+    "HOME": "Polski Komitet Naukowy SEP ds. Technologii Grafenowej",
+    "PROGRAM": {
+      "TITLE": "Założenia programowe",
+      "IMAGE_CAPTION": "filary działalności",
+      "DESCRIPTION": "Problematyka Komitetu SEP do spraw Technologii Grafenowej ~ KS Grafen w pełni wpisuje się w realizacje statutowej działalności SEP opierajac się głównie na sześciu filarach działalności:",
+      "AD_1": {
+        "TITLE": "Działalność aktywizująca",
+        "DESCRIPTION": "Działalność aktywizująca w pierwszym rzędzie opiera się na pracy Komitetu SEP do spraw Technologii, (symbol) KS Grafen z dodatkowo utworzonymi zespołami tematycznymi. "
+      },
+      "AD_2": {
+        "TITLE": "Dzialalnosc archiwizujaca",
+        "DESCRIPTION": "Działalność archiwizująca bazuje na tworzeniu baz danych, literaturowych, patentowych, raport, przeglądów, zestawień wyników badań. "
+      },
+      "AD_3": {
+        "TITLE": "Dzialalnosc badawcza",
+        "DESCRIPTION": "Działalność badawcza opiera się na aktywnym włączeniu się Komitetu do tworzonych konsorcjów z Jednostkami Naukowo Badawczymi polegającym na udostępnianiu własnych materiałów źródłowych. "
+      },
+      "AD_4": {
+        "TITLE": "Działalność komercjalizacyjna",
+        "DESCRIPTION": "Działalność komercjalizacyjna ma za zadanie wytworzenie struktury mającej na celu komercjalizację projektów naukowo badawczych w oparciu o współpracę z MŚP, OBR, instytutów w konsorcjum z docelowym dążeniem do wyłonienia w ramach komitetu własnej struktury pozwalającej na prowadzenie projektów komercyjnych (np grantów) w ramach Komitetu SEP do spraw Technologii Grafenowej "
+      },
+      "AD_5": {
+        "TITLE": "Działalność naukowa",
+        "DESCRIPTION": "Działalność naukowa ma za zadanie prowadzenie prac systematyzujących i przeglądowych i ich publikacje."
+      },
+      "AD_6": {
+        "TITLE": "Działalność popularyzatorska",
+        "DESCRIPTION": "Działalność popularyzatorska ma za zadanie opracowywanie polskich i zagranicznych publikacji, książek, wnosić wkład do prasy technicznej i newslettera SEP, tworzenie prac opiniodawczych i eksperckich, prowadzenie kampanii reklamowych, wsparcie piśmiennictwa w zakresie tematycznym KS Grafen."
+      }
+      
+    }
   },
   "IMAGES": {
-    "SEP_LOGO": "ksgrafensymbol_pl"
+    "SEP_LOGO": "ksgrafensymbol_pl",
+    "ACTIVITIES": "KSGrafenSymbolTrans50"
   }
  }
