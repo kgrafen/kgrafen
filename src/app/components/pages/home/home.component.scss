@@ -17,3 +17,52 @@
   }
 }
 
+
+.pillars-roof  {
+  width: 50%;
+  height: 0;
+  padding-left:50%;
+  padding-bottom: 9%;
+  overflow: hidden;
+}
+.pillars-roof  div {
+  width: 0; 
+  height: 0;
+  margin-left: -700px;
+  border-left: 700px solid transparent;
+  border-right: 700px solid transparent;
+  border-bottom: 80px solid #f7d878;
+  color: #e81630;
+  position: relative;
+}
+
+.pillars-wrapper {
+  text-align: center;
+  font-weight: bold;
+  color: #e81630;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-pillars {
+  background: #f7d878;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+  vertical-align: middle;
+  height: 320px;
+  font-weight: bold;
+  padding: 0 2%;
+  font-size: 1em;
+  
+}
+
+.roof-text {
+  transform: translateX(-50%);
+  position: absolute;
+  top: 20px;
+  font-size: 1.6em;
+}
+
+.activities-descriptions {
+  margin-top: 30px;
+}

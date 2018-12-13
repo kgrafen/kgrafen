@@ -9,11 +9,17 @@
   <div fxFlex="50" fxFlex.lt-md="100">
     <h2 [innerHTML]="'PAGES.PROGRAM.TITLE' | translate"></h2>
     <p [innerHTML]="'PAGES.PROGRAM.DESCRIPTION' | translate"></p>
-    <div *ngFor="let activity of [1,2,3,4,5,6]" [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.TITLE' | translate"></div>
-
-    <div *ngFor="let activity of [1,2,3,4,5,6]">
-      <h3 [innerHTML]="'Ad.' + activity + '. ' + ('PAGES.PROGRAM.AD_' + activity + '.TITLE' | translate)"></h3>
-      <p [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.DESCRIPTION' | translate"></p>
+    <div class="pillars-roof">
+      <div><span class="roof-text">{{'PAGES.PROGRAM.ACTIVITIES' | translate}}</span></div>
+    </div>
+    <div class="pillars-wrapper">
+      <span *ngFor="let activity of [1,2,3,4,5,6]" class="activity-pillars" [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.PILLAR' | translate"></span>
+    </div>
+    <div class="activities-descriptions">
+      <div *ngFor="let activity of [1,2,3,4,5,6]">
+        <h3 [innerHTML]="'Ad.' + activity + '. ' + ('PAGES.PROGRAM.AD_' + activity + '.TITLE' | translate)"></h3>
+        <p [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.DESCRIPTION' | translate"></p>
+      </div>
     </div>
 
   </div>
