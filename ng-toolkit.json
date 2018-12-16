@@ -1,0 +1,7 @@
+{
+  "universal": {
+    "project": "KGrafen",
+    "skipInstall": false,
+    "directory": "."
+  }
+}

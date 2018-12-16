@@ -6,7 +6,7 @@ import { Hologram } from '../../../services/holograms/hologram.model';
 import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
 import { isNgTemplate } from '@angular/compiler';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
-import { ProjectsService } from 'src/app/services/projects/projects.service';
+import { ProjectsService } from '../../../services/projects/projects.service';
 import { Location } from '@angular/common';
 
 @Component({

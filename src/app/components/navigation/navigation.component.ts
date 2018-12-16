@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { WINDOW } from '@ng-toolkit/universal';
+import { Component, OnInit , Inject} from '@angular/core';
 import { MenuItem } from '../models/menu-item';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
 import { CoinSettings, SideSettings } from '../models/coin';
@@ -16,7 +17,7 @@ export class NavigationComponent implements OnInit {
 
 
 
-  constructor(
+  constructor(@Inject(WINDOW) private window: Window, 
     private route: ActivatedRoute,
     private translateService: TranslateService,
     private router: Router,
@@ -79,7 +80,7 @@ export class NavigationComponent implements OnInit {
 
   menuItemClicked(item: MenuItem) {
     if (item.Settings.IsExternalLink) {
-      window.open(item.Link, '_blank');
+      this.window.open(item.Link, '_blank');
     } else {
       this.router.navigate([item.Link]);
     }
