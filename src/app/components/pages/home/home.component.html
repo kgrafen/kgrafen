@@ -1,12 +1,12 @@
 <h1>{{'PAGES.HOME' | translate}}</h1>
-<div class="content" fxLayout="row" fxLayout.lt-md="column" fxFlexFill>
-  <div fxFlex="50" fxFlex.lt-md="100">
+<div class="content" style="float:left; width: 100%;">
+  <div style="float:left; width: 50%;">
 
-    <img src="assets/images/{{'IMAGES.ACTIVITIES' | translate}}.png">
+    <img src="assets/images/ksgrafen_activities_{{languageCode}}.png">
 
-    {{'PAGES.HOME' | translate}} ~ {{'PAGES.HOME.IMAGE_CAPTION' | translate}}
+    {{'PAGES.HOME' | translate}} ~ {{'PAGES.HOME.PROGRAM.IMAGE_CAPTION' | translate}}
   </div>
-  <div fxFlex="50" fxFlex.lt-md="100">
+  <div style="float:left; width: 50%;">
     <h2 [innerHTML]="'PAGES.PROGRAM.TITLE' | translate"></h2>
     <p [innerHTML]="'PAGES.PROGRAM.DESCRIPTION' | translate"></p>
     <div class="pillars-roof">

@@ -14,7 +14,7 @@ export class NavigationComponent implements OnInit {
 
 
   menuItems: MenuItem[] = [];
-
+  languageCode: string = 'pl';
 
 
   constructor(@Inject(WINDOW) private window: Window, 

@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   projectsNames: string[];
   sourcesNames: string[];
   title: string;
+  languageCode: string = 'pl';
 
   constructor(
     public hologramsService: HologramsService,
