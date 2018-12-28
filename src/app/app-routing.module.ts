@@ -12,6 +12,8 @@ import { MisjaComponent } from './components/pages/misja/misja.component';
 import { WizjaComponent } from './components/pages/wizja/wizja.component';
 import { RegulaminComponent } from './components/pages/regulamin/regulamin.component';
 import { ForumComponent } from './components/pages/forum/forum.component';
+import { ExternalLinkComponent } from './components/elements/external-link/external-link.component';
+// import { externalUrlProvider } from './app.module';
 
 const routes: Routes = [
   { path: 'home',  component: HomeComponent },
@@ -27,7 +29,15 @@ const routes: Routes = [
   // individual holo master coin
   { path: 'projects/:project',  component: ProjectsComponent },
   // Default
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+//   {
+//     path: 'externalRedirect',
+//     resolve: {
+//         url: externalUrlProvider,
+//     },
+//     // We need a component here because we cannot define the route otherwise
+//     component: ExternalLinkComponent,
+//   },
 ];
 
 @NgModule({

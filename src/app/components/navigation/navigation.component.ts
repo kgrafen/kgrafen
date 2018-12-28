@@ -17,7 +17,7 @@ export class NavigationComponent implements OnInit {
   languageCode: string = 'pl';
 
 
-  constructor(@Inject(WINDOW) private window: Window, 
+  constructor(
     private route: ActivatedRoute,
     private translateService: TranslateService,
     private router: Router,
@@ -33,7 +33,7 @@ export class NavigationComponent implements OnInit {
   itemSelected: MenuItem;
 
   ngOnInit() {
-    this.loadGlobe();
+    // this.loadGlobe();
 
     this.translateService.onLangChange.subscribe(value => {
       let menuItemsTranslation = value.translations.NAVIGATION.ITEMS;
@@ -80,7 +80,7 @@ export class NavigationComponent implements OnInit {
 
   menuItemClicked(item: MenuItem) {
     if (item.Settings.IsExternalLink) {
-      this.window.open(item.Link, '_blank');
+      this.router.navigate(['/externalRedirect', { externalUrl: item.Link }]);
     } else {
       this.router.navigate([item.Link]);
     }

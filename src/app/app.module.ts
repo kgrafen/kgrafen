@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, InjectionToken } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
@@ -38,11 +38,15 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { FlagsComponent } from './components/elements/flags/flags.component';
+import { ExternalLinkComponent } from './components/elements/external-link/external-link.component';
+import { ActivatedRouteSnapshot } from '@angular/router';
 
  // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/translations/', '.json');
 }
+
+// export const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 
 @NgModule({
   declarations: [
@@ -66,6 +70,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     WizjaComponent,
     RegulaminComponent,
     ForumComponent,
+    ExternalLinkComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,7 +94,15 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
   ],
-  providers: [],
+//   providers: [
+//     {
+//         provide: externalUrlProvider,
+//         useValue: (route: ActivatedRouteSnapshot) => {
+//             const externalUrl = route.paramMap.get('externalUrl');
+//             window.open(externalUrl, '_blank');
+//         },
+//     },
+//   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
