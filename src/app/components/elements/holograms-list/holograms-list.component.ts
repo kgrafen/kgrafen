@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Hologram } from 'src/app/services/holograms/hologram.model';
+import { Hologram } from '../../../services/holograms/hologram.model';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
-import { HologramsService } from 'src/app/services/holograms/holograms.service';
+import { HologramsService } from '../../../services/holograms/holograms.service';
 
 @Component({
   selector: 'app-holograms-list',

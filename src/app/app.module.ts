@@ -1,3 +1,6 @@
+import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CommonModule } from '@angular/common';
+import { TransferHttpCacheModule } from '@nguniversal/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -68,8 +71,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     RegulaminComponent,
     ForumComponent,
   ],
-  imports: [
-    BrowserModule,
+  imports:[
+ CommonModule,
+NgtUniversalModule,
+ 
+ TransferHttpCacheModule,
+HttpClientModule,
+ 
+    
     FormsModule,
     AppRoutingModule,
     HttpModule,
@@ -92,6 +101,5 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HologramsService } from '../../../services/holograms/holograms.service';
-import { ProjectsService } from 'src/app/services/projects/projects.service';
+import { ProjectsService } from '../../../services/projects/projects.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
