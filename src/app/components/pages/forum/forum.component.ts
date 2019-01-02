@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, Inject } from '@angular/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 declare var initCarousel: any;
 
@@ -9,8 +10,12 @@ declare var initCarousel: any;
 })
 export class ForumComponent implements OnInit {
 
-  constructor() {
-    initCarousel(this.carouselItem.length);
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      initCarousel(this.carouselItem.length);
+    }
    }
 
   carouselItem = [
@@ -50,7 +55,9 @@ export class ForumComponent implements OnInit {
   }
 
   rotationPause() {
-    document.getElementById("carousel").setAttribute('style', 'animation-play-state: ' + 'pause');
+    if (isPlatformBrowser(this.platformId)) {
+      document.getElementById("carousel").setAttribute('style', 'animation-play-state: ' + 'pause');
+    }
   }
 
   rotationResume() {
@@ -58,13 +65,17 @@ export class ForumComponent implements OnInit {
   }
 
   spinRight(entered: boolean) {
-    let animationDuration = (entered) ? "running" : "paused";
-    document.getElementById("carousel-outer").setAttribute('style', 'animation-play-state: ' + animationDuration)
+    if (isPlatformBrowser(this.platformId)) {
+      let animationDuration = (entered) ? "running" : "paused";
+      document.getElementById("carousel-outer").setAttribute('style', 'animation-play-state: ' + animationDuration);
+    }
   }
 
   spinLeft(entered: boolean) {
-    let animationDuration = (entered) ? "running" : "paused";
-    document.getElementById("carousel-outerer").setAttribute('style', 'animation-play-state: ' + animationDuration)
+    if (isPlatformBrowser(this.platformId)) {
+      let animationDuration = (entered) ? "running" : "paused";
+      document.getElementById("carousel-outerer").setAttribute('style', 'animation-play-state: ' + animationDuration);
+    }
   }
 
 }

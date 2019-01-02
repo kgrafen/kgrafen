@@ -1,9 +1,10 @@
 import { WINDOW } from '@ng-toolkit/universal';
-import { Component, OnInit , Inject} from '@angular/core';
+import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
 import { MenuItem } from '../models/menu-item';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
 import { CoinSettings, SideSettings } from '../models/coin';
 import { TranslateService } from '@ngx-translate/core';
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
   selector: 'app-navigation',
@@ -21,6 +22,7 @@ export class NavigationComponent implements OnInit {
     private route: ActivatedRoute,
     private translateService: TranslateService,
     private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
 
   }
@@ -33,7 +35,9 @@ export class NavigationComponent implements OnInit {
   itemSelected: MenuItem;
 
   ngOnInit() {
-    this.loadGlobe();
+    if (isPlatformBrowser(this.platformId)) {
+      this.loadGlobe();
+    }
 
     this.translateService.onLangChange.subscribe(value => {
       let menuItemsTranslation = value.translations.NAVIGATION.ITEMS;
