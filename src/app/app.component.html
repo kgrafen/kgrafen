@@ -1,10 +1,22 @@
 <app-topbar></app-topbar>
 <div class="content" fxLayout="row" fxLayout.lt-md="column" fxFlexFill>
   <div *ngIf="showNavigation" class="navigation" fxFlex="20" fxFlex.lt-md="100">
-    <app-navigation></app-navigation>
+    <!-- <app-navigation></app-navigation> -->
   </div>
   <div class="pages" [fxFlex]="outletWidth">
-      <app-flags></app-flags>
+      <!-- <app-flags></app-flags> -->
     <router-outlet></router-outlet>
   </div>
 </div>
+
+<div class="navigateToPage" (click)="menuItemClicked()">contact</div>
+
+
+<!--  TODO
+
+~> open server side navigation
+  ~> start with simple navigate button [DONE]
+~> open server side translations
+~> make sure all the elements and links are rendered for server 
+
+  -->

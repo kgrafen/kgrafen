@@ -3,7 +3,7 @@ import { Component, OnInit , Inject, PLATFORM_ID } from '@angular/core';
 import { MenuItem } from '../models/menu-item';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
 import { CoinSettings, SideSettings } from '../models/coin';
-import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 @Component({
@@ -20,9 +20,9 @@ export class NavigationComponent implements OnInit {
 
   constructor(@Inject(WINDOW) private window: Window, 
     private route: ActivatedRoute,
-    private translateService: TranslateService,
+    // private translateService: TranslateService,
     private router: Router,
-    @Inject(PLATFORM_ID) private platformId: Object
+    // @Inject(PLATFORM_ID) private platformId: Object
   ) {
 
   }
@@ -35,31 +35,31 @@ export class NavigationComponent implements OnInit {
   itemSelected: MenuItem;
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.loadGlobe();
-    }
+    // if (isPlatformBrowser(this.platformId)) {
+    //   this.loadGlobe();
+    // }
 
-    this.translateService.onLangChange.subscribe(value => {
-      let menuItemsTranslation = value.translations.NAVIGATION.ITEMS;
-      this.menuItems = [
-        new MenuItem(menuItemsTranslation["HOME"], "/home", "#b9d4ec"),
-        new MenuItem(menuItemsTranslation["CONTACT"], "/contact", "#ffe2b9"),
-        new MenuItem(menuItemsTranslation["SOCIAL"], "/social", "#f1c5f3"),
-        new MenuItem(menuItemsTranslation["PROJECTS"], "/projects", "#caecf7"),
-        new MenuItem(menuItemsTranslation["MISSION_VISION"], "/misja", "#bff5af"),
-        new MenuItem(menuItemsTranslation["FORUM"], "/forum", "#ece6ac"),
-        new MenuItem(menuItemsTranslation["DECLARATION"], "/regulamin", "#fa96ab"),
-      ];
+    // this.translateService.onLangChange.subscribe(value => {
+    //   let menuItemsTranslation = value.translations.NAVIGATION.ITEMS;
+    //   this.menuItems = [
+    //     new MenuItem(menuItemsTranslation["HOME"], "/home", "#b9d4ec"),
+    //     new MenuItem(menuItemsTranslation["CONTACT"], "/contact", "#ffe2b9"),
+    //     new MenuItem(menuItemsTranslation["SOCIAL"], "/social", "#f1c5f3"),
+    //     new MenuItem(menuItemsTranslation["PROJECTS"], "/projects", "#caecf7"),
+    //     new MenuItem(menuItemsTranslation["MISSION_VISION"], "/misja", "#bff5af"),
+    //     new MenuItem(menuItemsTranslation["FORUM"], "/forum", "#ece6ac"),
+    //     new MenuItem(menuItemsTranslation["DECLARATION"], "/regulamin", "#fa96ab"),
+    //   ];
 
-      this.router.events.subscribe(val => {
-        if (val instanceof RoutesRecognized) {
-          let selItem = this.menuItems.find(item => item.Link == val.url);
-          this.itemSelected = (selItem)? selItem: this.menuItems[0];
-          this.itemPreviewName = (!this.itemSelected.Settings.HasPreview) ? this.itemSelected.Name : "";
-          this.itemHoveredName = this.itemSelected.Name;
-        }
-      });
-    });
+    //   this.router.events.subscribe(val => {
+    //     if (val instanceof RoutesRecognized) {
+    //       let selItem = this.menuItems.find(item => item.Link == val.url);
+    //       this.itemSelected = (selItem)? selItem: this.menuItems[0];
+    //       this.itemPreviewName = (!this.itemSelected.Settings.HasPreview) ? this.itemSelected.Name : "";
+    //       this.itemHoveredName = this.itemSelected.Name;
+    //     }
+    //   });
+    // });
   }
 
   loadGlobe() {

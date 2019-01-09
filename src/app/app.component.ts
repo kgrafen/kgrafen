@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, RoutesRecognized } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -15,12 +15,12 @@ export class AppComponent implements OnInit  {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private translate: TranslateService,
+    // private translate: TranslateService,
   ) {
     // this language will be used as a fallback when a translation isn't found in the current language
-    translate.setDefaultLang('gb');
+    // translate.setDefaultLang('gb');
      // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translate.use('pl');
+    // translate.use('pl');
   }
 
   ngOnInit() {
@@ -34,5 +34,8 @@ export class AppComponent implements OnInit  {
 
     this.route.params.subscribe(params => {
     });
+  }
+  menuItemClicked() {
+    this.router.navigate(['/contact']);
   }
 }

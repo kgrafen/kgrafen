@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HologramsService } from '../../../services/holograms/holograms.service';
 import { ProjectsService } from '../../../services/projects/projects.service';
-import { TranslateService } from '@ngx-translate/core';
+// import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
   constructor(
     public hologramsService: HologramsService,
     private projectsService: ProjectsService,
-    private translateService: TranslateService,
+    // private translateService: TranslateService,
     ) {
-    this.translateService.get('PAGES.HOME').subscribe(value => this.title = value);
+    // this.translateService.get('PAGES.HOME').subscribe(value => this.title = value);
   }
 
   ngOnInit() {

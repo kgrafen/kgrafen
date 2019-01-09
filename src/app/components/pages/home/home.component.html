@@ -1,24 +1,24 @@
-<h1>{{'PAGES.HOME' | translate}}</h1>
+<h1>{{'PAGES.HOME' }}</h1>
 <div class="content" fxLayout="row" fxLayout.lt-md="column" fxFlexFill>
   <div fxFlex="50" fxFlex.lt-md="100">
 
-    <img src="assets/images/{{'IMAGES.ACTIVITIES' | translate}}.png">
+    <img src="assets/images/{{'IMAGES.ACTIVITIES' }}.png">
 
-    {{'PAGES.HOME' | translate}} ~ {{'PAGES.HOME.IMAGE_CAPTION' | translate}}
+    {{'PAGES.HOME' }} ~ {{'PAGES.HOME.IMAGE_CAPTION' }}
   </div>
   <div fxFlex="50" fxFlex.lt-md="100">
-    <h2 [innerHTML]="'PAGES.PROGRAM.TITLE' | translate"></h2>
-    <p [innerHTML]="'PAGES.PROGRAM.DESCRIPTION' | translate"></p>
+    <h2 [innerHTML]="'PAGES.PROGRAM.TITLE' "></h2>
+    <p [innerHTML]="'PAGES.PROGRAM.DESCRIPTION' "></p>
     <div class="pillars-roof">
-      <div><span class="roof-text">{{'PAGES.PROGRAM.ACTIVITIES' | translate}}</span></div>
+      <div><span class="roof-text">{{'PAGES.PROGRAM.ACTIVITIES' }}</span></div>
     </div>
     <div class="pillars-wrapper">
-      <span *ngFor="let activity of [1,2,3,4,5,6]" class="activity-pillars" [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.PILLAR' | translate"></span>
+      <span *ngFor="let activity of [1,2,3,4,5,6]" class="activity-pillars" [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.PILLAR' "></span>
     </div>
     <div class="activities-descriptions">
       <div *ngFor="let activity of [1,2,3,4,5,6]">
-        <h3 [innerHTML]="'Ad.' + activity + '. ' + ('PAGES.PROGRAM.AD_' + activity + '.TITLE' | translate)"></h3>
-        <p [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.DESCRIPTION' | translate"></p>
+        <h3 [innerHTML]="'Ad.' + activity + '. ' + ('PAGES.PROGRAM.AD_' + activity + '.TITLE' )"></h3>
+        <p [innerHTML]="'PAGES.PROGRAM.AD_' + activity + '.DESCRIPTION' "></p>
       </div>
     </div>
 
